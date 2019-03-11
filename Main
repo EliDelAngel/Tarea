@@ -1,0 +1,22 @@
+
+package Contador_Ocurrencias;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        Random r = new Random();    //llenado aleatorio de la lista
+        for(int i = 0; i<15; i++){
+            list.add(r.nextInt(11));
+        }
+        System.out.println (list);// le puse esta para ver los numeros que se le ingresan
+        Integer foo = 1;
+        Integer count = Utilities.ocurrences(list, foo); //llamada al mÃ©todo genÃ©rico 
+
+        String bar = String.format ("El elemento %d aparece en la lista %d veces", foo, count);
+        System.out.println (bar);
+    }
+}
