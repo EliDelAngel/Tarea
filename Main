@@ -20,3 +20,25 @@ public class Main {
         System.out.println (bar);
     }
 }
+
+
+//Utilities.Java
+
+
+package Contador_Ocurrencias;
+
+public class Utilities<T>{
+    
+   public T contador;
+   
+   public static <T>Integer ocurrences(T lista, T valor){
+       Integer cont = 0, cont2 = 0;
+       do{
+           if(valor == lista){
+               cont+=1;  //cuenta cuantas veces aparece el valor en la lista
+           }
+           cont2+=1;
+       }while(cont2 != 15);
+       return cont;
+   }
+}
